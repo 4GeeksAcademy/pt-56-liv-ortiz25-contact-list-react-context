@@ -1,4 +1,4 @@
-const initialStore = ({ getStore, getActions, setStore }) => {
+const initialStore = ({ getActions, setStore }) => {
     return {
         store: {
             contacts: [],
