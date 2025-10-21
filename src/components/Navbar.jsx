@@ -1,19 +1,21 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+    return (
+        <nav className="navbar navbar-light bg-light shadow-sm mb-4">
+            <div className="container d-flex justify-content-between align-items-center">
+                <Link to="/" className="navbar-brand fw-bold text-primary-emphasis fs-4">
+                    Contact List
+                </Link>
 
-	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav>
-	);
+                <Link to="/add" className="text-decoration-none">
+                    <button className="btn btn-success px-3 py-2 fs-6 fw-semibold">
+                        <i className="fa-solid fa-user-plus me-2"></i>
+                        Add New Contact
+                    </button>
+                </Link>
+            </div>
+        </nav>
+    );
 };
